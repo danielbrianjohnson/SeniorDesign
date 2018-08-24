@@ -1,0 +1,30 @@
+table {
+    color: blue;
+}
+
+td {
+    
+    padding: 1.5%;
+}
+
+#button {
+    width: 30em;
+    height: 30em;
+    border: 2px solid green;
+    background: #ffe;
+    border-radius: 50%;
+    display: inline-block;
+    
+}
+a {
+    display: block;
+    width: 100%;
+    line-height: 2em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 25%;
+    font-size: 500%;
+}
+
+
