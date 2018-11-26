@@ -37,3 +37,129 @@ a {
     align-content: center;
     font-size: 200%;
 }
+
+.donut { 
+    display: block;
+    margin: auto;
+    align-content: center;
+    border: 30px solid #17EACE;
+    border-radius: 200px;
+    height:200px;
+    width:200px;
+}
+
+.measDisplay {
+    
+    margin-left: 290px;
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    margin-bottom: 20px;
+    border: 1px solid #17EACE;
+    background-color: #C8EFE9;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+    
+    
+}
+
+.switch {
+  position: absolute;
+  display: inline-block;
+    margin-left: 420px;
+  width: 25px;
+  height: 55px;
+margin-top: 3px;
+    
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #C8EFE9;
+  -webkit-transition: .4s;
+  transition: .4s;
+    border: 1px solid #17EACE;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 4px;
+  background-color: #17EACE;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #C8EFE9;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #C8EFE9;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateY(-26px);
+  -ms-transform: translateY(-26px);
+  transform: translateY(-26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.units {
+    margin-top: 5px;
+    position: absolute;
+    display: inline;
+    margin-left: 460px
+}
+
+.units2 {
+    margin-top: 35px;
+    position: absolute;
+    display: inline;
+    margin-left: 460px
+}
+
+.units3 {
+    margin-top: 20px;
+    position: absolute;
+    display: inline;
+    margin-left: 226px
+}
+
+.tare {
+    margin-top: 10px;
+    position: absolute;
+    margin-left: 260px;
+    display: inline-block;
+    width: 1px;
+    height: 20px;
+    margin-bottom: 20px;
+    background-color: #C8EFE9;
+    border-radius: 2000px;
+    padding: 10px;
+    border: 1px solid #17EACE;
+}
