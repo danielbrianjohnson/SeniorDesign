@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>SD UI</title>
+<style>#bookflip{color:#ffffff;}</style>
+<script type="text/javascript" src="bookflipjs/bookflip.js"></script>
+    <link rel="stylesheet" href="main.css" />
+
+
+</head>
+<body>
+<!--- <div id="button"><a href="tofuSoup.html">Tofu Soup</a></div>
+<div id="button"><a href="pasta.html">Pasta</a></div> -->
+
+
+
+    <div id="myDIV" class="header">
+  <input type="text" id="myInput" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL">
+  <li>Eggs</li>
+  <li>Jalapenos</li>
+  <li>Avacado</li>
+  <li>Salsa</li>
+  <li>Butter</li>
+  <li>Oil</li>
+    <li>Beans</li>
+    <li>Cheese</li>
+</ul>
+
+<script>
+// Create a "close" button and append it to each list item
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+// Add a "checked" symbol when clicking on a list item
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+</script>
+
+<!--- 
+<a class="container">
+  <img src="UI_PNGs/Recipe_Inventory/Rectangle_for_item.png" alt="Snow" style="width:100%;">
+  <div class="centered">All purpose flour</div>
+</a>
+  
+<a class="container">
+  <img src="UI_PNGs/Recipe_Inventory/Rectangle_for_item.png" alt="Snow" style="width:100%;">
+  <div class="centered">Eggs</div>
+</a>
+    <a class="container" target="_top">
+  <img src="UI_PNGs/Recipe_Inventory/Rectangle_for_item.png" alt="Snow" style="width:100%;">
+  <div class="centered">Avacado</div>
+</a>
+  <a class="container">
+  <img src="UI_PNGs/Recipe_Inventory/Rectangle_for_item.png" alt="Snow" style="width:100%;">
+  <div class="centered">Jalapenos</div>
+</a>
+  <a class="container">
+  <img src="UI_PNGs/Recipe_Inventory/Rectangle_for_item.png" alt="Snow" style="width:100%;">
+  <div class="centered">Butter</div>
+</a>
+  <a class="container">
+  <img src="UI_PNGs/Recipe_Inventory/Rectangle_for_item.png" alt="Snow" style="width:100%;">
+  <div class="centered">Oil</div>
+</a>
+  
+  <a class="container">
+  <img src="UI_PNGs/Recipe_Inventory/Rectangle_for_item.png" alt="Snow" style="width:100%;">
+  <div class="centered">Black Beans</div>
+</a>
+  <a class="container">
+  <img src="UI_PNGs/Recipe_Inventory/Rectangle_for_item.png" alt="Snow" style="width:100%;">
+  <div class="centered">Cheese</div>
+</a>
+-->
+    
+</body>
+    
+    
+</html>
